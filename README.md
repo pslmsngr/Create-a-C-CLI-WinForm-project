@@ -20,6 +20,25 @@ Create a C++/CLI WinForm project using Visual Studio 2017.
 
    a) Select Visual C++\Resource\AssemblyResource File (.resx) named Form1.resx, and then the Add button.
 
-6) Right-click on the CppCliWinForm project within the Solution Explorer and Unload Project:
+6) Right-click on the CppCliWinForm project within the Solution Explorer and select Unload Project:
 
    a) Select the Yes button if asked to save any files.
+   
+7) Right-click on the CppCliWinForm project within the Solution Explorer and select Edit CppCliWinForm.vcxproj:
+   
+   a) Go to near the bottom of the Xml and change this:
+        <ItemGroup>
+         <EmbeddedResource Include="Form1.resx" />
+        </ItemGroup>
+
+     to this:
+       <ItemGroup>
+        <EmbeddedResource Include="Form1.resx">
+          <DependentUpon>Form1.h</DependentUpon>
+          <SubType>Designer</SubType>
+        </EmbeddedResource>
+      </ItemGroup>
+
+8) Right-click on the CppCliWinForm project within the Solution Explorer and select Reload CppCliWinForm.vcxproj:
+
+   a) Select the Yes button if asked to close any files.
