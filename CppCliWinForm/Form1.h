@@ -8,25 +8,13 @@ namespace CppCliWinForm
    public ref class Form1 : public System::Windows::Forms::Form
    {
    public:
-      Form1(void)
-      {
-         InitializeComponent();
-         //
-         //TODO: Add the constructor code here
-         //
-      }
+     Form1(void);
 
    protected:
       /// <summary>
       /// Clean up any resources being used.
       /// </summary>
-      ~Form1()
-      {
-         if (components)
-         {
-            delete components;
-         }
-      }
+     ~Form1();
 
    private:
       /// <summary>
@@ -39,14 +27,7 @@ namespace CppCliWinForm
       /// Required method for Designer support - do not modify
       /// the contents of this method with the code editor.
       /// </summary>
-      void InitializeComponent(void)
-      {
-         this->components = gcnew System::ComponentModel::Container();
-         this->Size = System::Drawing::Size(300, 300);
-         this->Text = L"Form1";
-         this->Padding = System::Windows::Forms::Padding(0);
-         this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-      }
+      void InitializeComponent(void);
 #pragma endregion
    };
 }
